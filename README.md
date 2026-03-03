@@ -1,56 +1,73 @@
-# NoHack Anti‑Cheat Suite
+<p align="center">
+  <img src="Ico/No hack.ico" width="128" height="128" alt="NoHack Icon">
+</p>
 
-NoHack Anti‑Cheat is a modular Windows security system designed to protect games from tampering, unauthorized tools, and integrity violations. It includes a complete toolchain for configuration, integrity generation, log viewing, and profile management. The suite installs cleanly into Program Files and stores logs in ProgramData, following professional Windows software standards.
+<h1 align="center" style="color:#ffffff;">NoHack Anti‑Cheat Suite</h1>
 
-## Installed Components
+<p align="center" style="color:#cccccc;">
+A lightweight, modular Windows anti‑cheat system designed for modern games.<br>
+This README is optimized for GitHub dark mode.
+</p>
 
-After installation, the suite is located in:
+##############################################
+#                                            #
+#        ████  ████   ██   ██   ████         #
+#        ██    ██     ██   ██   ██           #
+#        ████  ████   ██   ██   ████         #
+#        ██    ██      ██ ██    ██           #
+#        ████  ████     ████    ████         #
+#                                            #
+#                N O H A C K                 #
+#                                            #
+##############################################
 
+## 🌙 Overview
+
+NoHack Anti‑Cheat protects Windows games by monitoring integrity, validating DLLs, detecting suspicious processes, and maintaining secure logs. The suite installs into Program Files and stores logs in ProgramData, following professional Windows software standards.
+
+## 📦 Installed Components
+
+**Install Location:**  
 C:\Program Files\NoHack Anti-Cheat\
 
 ### Main Application
-NoHack.exe  
-The core anti‑cheat engine.  
+**NoHack.exe**  
 • Monitors game integrity  
 • Scans for blacklisted processes  
 • Validates DLL hashes  
 • Logs activity  
-• Runs silently in the system tray  
+• Runs silently in the tray  
 
-## Tools (Installed in Tools\)
+## 🧰 Tools (Installed in Tools\)
 
-IntegrityGen.exe  
-Generates integrity files (integrity_<profile>.txt) containing CRC32 hashes of game DLLs and executables.
+**IntegrityGen.exe**  
+Generates CRC32 integrity lists for game files.
 
-LogViewer.exe  
-GUI tool for browsing logs stored in:  
+**LogViewer.exe**  
+Views logs stored in:  
 C:\ProgramData\NoHack\logs\
 
-NoHackConfigGen.exe  
-Creates JSON configuration files and integrity templates for new game profiles.
+**NoHackConfigGen.exe**  
+Creates JSON configs and integrity templates.
 
-NoHackControl.exe  
-Control panel for:  
-• Managing profiles  
-• Setting game paths  
-• Opening logs  
-• Launching NoHack with a selected profile  
+**NoHackControl.exe**  
+GUI control panel for profiles, logs, and settings.
 
-ProfileSelector.exe  
-Simple launcher that allows selecting a profile and starting NoHack with it.
+**ProfileSelector.exe**  
+Launches NoHack with a chosen profile.
 
-NoHackPlugin.dll  
-A safe plugin DLL that can be loaded by your own game (not injected). Used for optional heartbeat or communication features.
+**NoHackPlugin.dll**  
+Optional safe plugin DLL for game‑side communication.
 
-## Folder Structure
+## 📁 Folder Structure
 
 C:\Program Files\NoHack Anti-Cheat\
-│
+│  
 ├── NoHack.exe  
 ├── Readme.txt  
 ├── Ico\  
 │   └── No hack.ico  
-│
+│  
 └── Tools\  
     ├── IntegrityGen.exe  
     ├── LogViewer.exe  
@@ -62,9 +79,7 @@ C:\Program Files\NoHack Anti-Cheat\
 Logs are stored in:  
 C:\ProgramData\NoHack\logs\
 
-## Start Menu Shortcuts
-
-The installer creates a Start Menu folder:
+## 🖥️ Start Menu Shortcuts
 
 Start Menu  
  └── NoHack Anti-Cheat  
@@ -79,21 +94,20 @@ Start Menu
 
 A desktop icon can be created during installation.
 
-## Running NoHack
+## 🚀 Running NoHack
 
-To launch the anti‑cheat:  
-• Use the Start Menu shortcut, or  
-• Run NoHack.exe directly from Program Files.
+Launch via Start Menu or run:  
+C:\Program Files\NoHack Anti-Cheat\NoHack.exe
 
-On first launch, NoHack will ask you to select the game executable. After configuration, NoHack will:  
+On first launch, NoHack asks for the game executable. After setup, it will:  
 • Verify game integrity  
-• Monitor for suspicious processes  
-• Validate DLL hashes  
+• Monitor suspicious processes  
+• Validate DLLs  
 • Log all activity  
 
-## Creating Integrity Files
+## 📝 Creating Integrity Files
 
-Use IntegrityGen.exe:
+Generate integrity lists:
 
 IntegrityGen.exe default game.dll engine.dll plugins\core.dll
 
@@ -101,28 +115,28 @@ This produces:
 
 integrity_default.txt
 
-Place this file next to NoHack.exe or inside the game folder depending on your setup.
+Place this file next to NoHack.exe or inside the game folder.
 
-## Creating JSON Config Files
+## 🧩 Creating JSON Config Files
 
 Use NoHackConfigGen.exe to generate:  
 • nohack_config.json  
 • nohack_integrity_<profile>.txt  
 
-These files can be placed inside the game directory.
+Place these inside the game directory.
 
-## PATH Integration
+## 🛠️ PATH Integration
 
 The installer automatically adds:
 
 C:\Program Files\NoHack Anti-Cheat\Tools
 
-to the user PATH, allowing you to run tools from any command prompt.
+to your PATH so tools can run from any terminal.
 
-## License
+## 📚 License
 
-This project is provided as-is for educational and personal use.
+This project is provided as‑is for educational and personal use.
 
-## Support
+## 🙋 Support
 
-For questions, updates, or improvements, contact the developer or check the project repository.
+For updates or improvements, contact the developer or check the repository.
